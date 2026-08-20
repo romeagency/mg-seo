@@ -137,7 +137,7 @@
   <div class="page-head">
     <div class="label-01">QUOTATION · ใบเสนอราคา</div>
     <h1>ใบเสนอราคาแก้ไข Technical SEO — www.mgcars.com</h1>
-    <div class="sub">รายการอ้างอิงจากผล SEO Audit วันที่ 20 สิงหาคม 2026 (10 รายการ) · เลือกรายการที่ต้องการ ราคารวมและระยะเวลาจะสรุปด้านล่าง · ยืนราคาถึง 19 กันยายน 2026</div>
+    <div class="sub">รายการอ้างอิงจากผล SEO Audit วันที่ 20 สิงหาคม 2026 (10 รายการ) · เลือกรายการที่ต้องการ ราคารวมและระยะเวลาจะสรุปด้านล่าง · ราคาสะท้อนรูปแบบการทำงาน — งานที่ AI ดำเนินการได้จบราคาย่อมเยา ส่วนงานที่ต้องใช้ทีมงานเฉพาะทางหรือประชุมร่วมกับทีม MG ราคาสูงขึ้นตามชั่วโมงงานจริง · ยืนราคาถึง 19 กันยายน 2026</div>
   </div>
 
   <div id="sections"></div>
@@ -187,31 +187,31 @@ const TASKS = [
   {id:'t1', tsk:'TSK-001', group:'critical', title:'แก้ HTTP 500 บนหน้าเงินหลัก 35 URL', free:true, price:0, days:5, checked:true, due:'31 ส.ค.',
    scope:'หน้า /cars, /promotions, /online-booking, /after-services คืนสถานะ 500 ให้ crawler — แก้ที่ระดับ server/rendering ไม่ใช่แค่ redirect เพื่อให้ Googlebot และ AI crawler อ่านหน้าเงินหลักได้',
    count:'35 URL · มี internal link ชี้เข้า 1,185 จุด · งานเร่งด่วน ดำเนินการทันที'},
-  {id:'t2', tsk:'TSK-002', group:'critical', title:'ติดตั้ง hreflang ทั้งเว็บ (th / en / x-default)', price:60000, days:7, checked:false, due:'31 ส.ค.',
+  {id:'t2', tsk:'TSK-002', group:'critical', title:'ติดตั้ง hreflang ทั้งเว็บ (th / en / x-default)', price:70000, days:7, mode:'hybrid', checked:false, due:'31 ส.ค.',
    scope:'เพิ่ม hreflang แบบ reciprocal ทุกหน้าที่มีคู่ TH/EN และเพิ่มใน sitemap เพื่อให้ Google เลือกเวอร์ชันภาษาถูกต้องใน SERP (ปัจจุบัน /en ได้ 1.29M impressions แต่ CTR ต่ำกว่าปกติ)',
    count:'ทุกหน้าที่มีคู่ภาษา + sitemap'},
-  {id:'t3', tsk:'TSK-003', group:'critical', title:'เปิด AI crawler ใน robots.txt + สร้าง /llms.txt', price:25000, days:2, checked:false, due:'20 ส.ค.',
+  {id:'t3', tsk:'TSK-003', group:'critical', title:'เปิด AI crawler ใน robots.txt + สร้าง /llms.txt', price:15000, days:2, mode:'ai', checked:false, due:'20 ส.ค.',
    scope:'อนุญาต GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, Applebot-Extended และสร้าง llms.txt ชี้ไปหน้าข้อมูลรุ่นรถ/ราคา/สเปก — ปัจจุบัน AI ตอบคำถามเกี่ยวกับ MG โดยอ้างอิงเว็บอื่นแทน mgcars.com',
    count:'robots.txt + /llms.txt'},
-  {id:'t4', tsk:'TSK-004', group:'high', title:'แก้ duplicate content 76 URL ที่ไม่มี canonical', price:75000, days:10, checked:false, due:'15 ก.ย.',
+  {id:'t4', tsk:'TSK-004', group:'high', title:'แก้ duplicate content 76 URL ที่ไม่มี canonical', price:60000, days:7, mode:'hybrid', checked:false, due:'15 ก.ย.',
    scope:'กำหนด canonical ให้ทุกกลุ่มหน้าที่เนื้อหาซ้ำ (หน้ารุ่นรถมีถึง 3 variant) และตัด parameter URL ออกจาก sitemap เพื่อรวม link equity กลับหน้าเดียวและลด crawl budget ที่เสียไป',
    count:'76 URL · ตรวจสอบซ้ำด้วยการ crawl เต็มระบบ'},
-  {id:'t5', tsk:'TSK-007', group:'high', title:'แก้หน้าโหลดช้า 48 URL (TTFB สูง)', price:150000, days:15, checked:false, due:'30 ก.ย.',
+  {id:'t5', tsk:'TSK-007', group:'high', title:'แก้หน้าโหลดช้า 48 URL (TTFB สูง)', price:180000, days:15, mode:'human', checked:false, due:'30 ก.ย.',
    scope:'TTFB เป็นสัดส่วนใหญ่ของ load time — แก้ที่ฝั่ง server/CDN ด้วย cache layer และ origin response (แย่สุด load 8.6 วินาที) เพื่อ Core Web Vitals และไม่ให้ crawler timeout',
    count:'48 URL · วัดผลก่อน–หลัง'},
-  {id:'t6', tsk:'TSK-008', group:'high', title:'แก้เนื้อหา /en ที่ยังเป็นภาษาไทย (News section)', price:45000, days:10, checked:false, due:'30 ก.ย.',
+  {id:'t6', tsk:'TSK-008', group:'high', title:'แก้เนื้อหา /en ที่ยังเป็นภาษาไทย (News section)', price:80000, days:12, mode:'human', checked:false, due:'30 ก.ย.',
    scope:'ปรับเนื้อหาหน้า English ในส่วนข่าวที่ยังแสดงเป็นภาษาไทยให้เป็นภาษาอังกฤษจริง เพื่อให้เวอร์ชันภาษาถูกต้องและสอดคล้องกับ hreflang',
    count:'News section (/en)'},
-  {id:'t7', tsk:'TSK-010', group:'high', title:'บล็อก staging subdomain (ex-prod) ไม่ให้ถูก index', price:20000, days:2, checked:false, due:'31 ส.ค.',
+  {id:'t7', tsk:'TSK-010', group:'high', title:'บล็อก staging subdomain (ex-prod) ไม่ให้ถูก index', free:true, price:0, days:2, checked:false, due:'31 ส.ค.',
    scope:'ใส่ noindex + authentication ที่ระดับ subdomain — staging ที่ติด index ทำให้เกิด duplicate แข่งกับ production และเสี่ยงข้อมูลราคา/สเปกเก่าหลุดสู่ผู้ใช้',
    count:'ex-prod subdomain'},
-  {id:'t8', tsk:'TSK-005', group:'medium', title:'เติม Open Graph tags ที่ขาด 50 URL', price:30000, days:5, checked:false, due:'30 ก.ย.',
+  {id:'t8', tsk:'TSK-005', group:'medium', title:'เติม Open Graph tags ที่ขาด 50 URL', price:20000, days:3, mode:'ai', checked:false, due:'30 ก.ย.',
    scope:'เพิ่ม og:title, og:description, og:image, og:type ให้ครบทุกหน้าและไม่ปะปน — ช่วย CTR จากการแชร์ผ่าน social/LINE ซึ่งเป็นช่องทางหลักของ MG',
    count:'50 URL'},
-  {id:'t9', tsk:'TSK-006', group:'medium', title:'ลด H1 ซ้ำซ้อนเหลือ 1 ต่อหน้า (20 URL)', price:30000, days:5, checked:false, due:'30 ก.ย.',
+  {id:'t9', tsk:'TSK-006', group:'medium', title:'ลด H1 ซ้ำซ้อนเหลือ 1 ต่อหน้า (20 URL)', price:20000, days:3, mode:'ai', checked:false, due:'30 ก.ย.',
    scope:'หน้ารุ่นรถบางหน้ามี H1 ถึง 6 ตัว — ปรับ template ให้เหลือ H1 เดียวและไล่ลำดับ H2/H3 ตามโครงเนื้อหา โดยไม่กระทบดีไซน์ที่แสดงผล',
    count:'20 URL'},
-  {id:'t10', tsk:'TSK-009', group:'medium', title:'แทน alt text ที่ auto-generate ด้วย alt ที่สื่อความหมาย', price:40000, days:7, checked:false, due:'31 ต.ค.',
+  {id:'t10', tsk:'TSK-009', group:'medium', title:'แทน alt text ที่ auto-generate ด้วย alt ที่สื่อความหมาย', price:25000, days:5, mode:'ai', checked:false, due:'31 ต.ค.',
    scope:'ระบบสร้าง alt อัตโนมัติจากชื่อไฟล์ — เขียน alt จริงตามรุ่นรถ/สี/มุมภาพ เพื่อปลดล็อก image search traffic และ accessibility',
    count:'ทั้งเว็บ'},
 ];
@@ -237,7 +237,7 @@ document.getElementById('sections').innerHTML = GROUPS.map(g=>{
       </div>
       <div class="pkg-price">
         <div class="pp num">${t.free?'ฟรี':baht(t.price)}</div>
-        <div class="pl">${t.free?'ไม่มีค่าใช้จ่าย':'รวม QA'}</div>
+        <div class="pl">${t.free?'ไม่มีค่าใช้จ่าย':({ai:'AI ดำเนินการหลัก · ราคาประหยัด',hybrid:'AI + ทีมงานร่วมดำเนินการ',human:'ทีมงานเฉพาะทาง + ประชุมกับทีม MG'}[t.mode]||'รวม QA')}</div>
         <div class="pl num">ระยะเวลา ${t.days} วันทำการ</div>
       </div>
     </label>
