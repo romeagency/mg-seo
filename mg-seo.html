@@ -32,7 +32,14 @@
   .shell .spacer{flex:1}
   .shell .meta{color:#c6c6c6;font-size:.75rem}
 
-  .wrap{max-width:56rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
+  .wrap{max-width:74rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
+  .layout{display:grid;grid-template-columns:minmax(0,1fr) 21rem;gap:1.5rem;align-items:start}
+  .l-side{position:sticky;top:1rem}
+  .l-side .summary{margin-top:0}
+  .l-side .s-pay{flex-direction:column}
+  .l-side .s-total{flex-direction:column;align-items:flex-start;gap:.125rem}
+  .l-side .s-total .t-amount{font-size:1.375rem}
+  @media(max-width:64rem){.layout{grid-template-columns:1fr}.l-side{position:static}}
 
   .label-01{font-size:.75rem;line-height:1rem;letter-spacing:.32px;color:var(--ink2)}
   .num{font-variant-numeric:tabular-nums}
@@ -140,10 +147,18 @@
     <div class="sub">อ้างอิงผล SEO Audit วันที่ 20 ส.ค. 2026 · เลือกรายการที่ต้องการ ระบบจะสรุปราคาและระยะเวลาให้ด้านล่าง · ยืนราคาถึง 19 ก.ย. 2026</div>
   </div>
 
+  <div class="layout">
+  <div class="l-main">
+
   <div id="sections"></div>
 
-  <div class="summary">
-    <div class="s-head" style="display:flex;align-items:baseline;gap:.75rem"><span style="flex:1">สรุปราคาตามรายการที่เลือก</span><span style="font-weight:400;color:var(--ink3);font-size:.75rem">ทุกรายการรวมการทดสอบ (QA)</span></div>
+  <div class="terms">
+    ทุกรายการรวมการทดสอบ (QA) · ระยะเวลาขั้นต่ำต่อโปรเจกต์ 21 วันทำการ · ชำระเงิน 2 งวด (50/50) · ส่วนลด 20% เมื่อเลือกครบทุกรายการ · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 ก.ย. 2026
+  </div>
+  </div>
+  <aside class="l-side">
+<div class="summary">
+    <div class="s-head"><div>สรุปราคาตามรายการที่เลือก</div><div style="font-weight:400;color:var(--ink3);font-size:.75rem;margin-top:.25rem">ทุกรายการรวมการทดสอบ (QA)</div></div>
     <div class="s-row" id="s-discount" style="display:none">
       <span class="tag green">ส่วนลด</span>
       <span class="s-name">เลือกครบทุกรายการ — ส่วนลด 20%</span>
@@ -171,9 +186,10 @@
     </div>
   </div>
 
-  <div class="terms">
-    ทุกรายการรวมการทดสอบ (QA) · ระยะเวลาขั้นต่ำต่อโปรเจกต์ 21 วันทำการ · ชำระเงิน 2 งวด (50/50) · ส่วนลด 20% เมื่อเลือกครบทุกรายการ · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 ก.ย. 2026
+  
+  </aside>
   </div>
+
 </div>
 
 <script>
