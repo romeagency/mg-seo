@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>MG Cars — SEO Improvement Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  /* Carbon Design System — White/g10 tokens */
+  :root{
+    --bg:#f4f4f4; --layer:#ffffff; --border:#e0e0e0;
+    --ink:#161616; --ink2:#525252; --ink3:#6f6f6f;
+    --interactive:#0f62fe;
+    --tag-red-bg:#ffd7d9; --tag-red-text:#a2191f;
+    --tag-magenta-bg:#ffd6e8; --tag-magenta-text:#9f1853;
+    --tag-blue-bg:#d0e2ff; --tag-blue-text:#0043ce;
+    --tag-gray-bg:#e0e0e0; --tag-gray-text:#393939;
+    --tag-green-bg:#a7f0ba; --tag-green-text:#0e6027;
+    --font:'IBM Plex Sans','IBM Plex Sans Thai','Helvetica Neue',Arial,sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:16px}
+  body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:.875rem;line-height:1.28572}
+
+  .shell{background:#161616;height:3rem;display:flex;align-items:center;padding:0 1rem}
+  .shell .name{color:#fff;font-size:.875rem}
+  .shell .name .prefix{font-weight:600;margin-right:.25rem}
+  .shell .spacer{flex:1}
+  .shell .meta{color:#c6c6c6;font-size:.75rem}
+
+  .wrap{max-width:52rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
+
+  .label-01{font-size:.75rem;line-height:1rem;letter-spacing:.32px;color:var(--ink2)}
+  .num{font-variant-numeric:tabular-nums}
+  .page-head{margin-bottom:1.25rem}
+  .page-head h1{font-size:1.75rem;line-height:2.25rem;font-weight:400;margin-top:.375rem}
+  .page-head .sub{color:var(--ink2);margin-top:.375rem;font-size:.8125rem}
+
+  .tag{display:inline-flex;align-items:center;height:1.5rem;padding:0 .5rem;border-radius:1.5rem;font-size:.75rem;letter-spacing:.32px;white-space:nowrap;flex:none}
+  .tag.red{background:var(--tag-red-bg);color:var(--tag-red-text)}
+  .tag.magenta{background:var(--tag-magenta-bg);color:var(--tag-magenta-text)}
+  .tag.blue{background:var(--tag-blue-bg);color:var(--tag-blue-text)}
+  .tag.gray{background:var(--tag-gray-bg);color:var(--tag-gray-text)}
+  .tag.green{background:var(--tag-green-bg);color:var(--tag-green-text)}
+
+  .cds-checkbox{appearance:none;-webkit-appearance:none;width:1rem;height:1rem;border:1px solid var(--ink);border-radius:1px;background:transparent;cursor:pointer;position:relative;flex:none;margin-top:.1875rem}
+  .cds-checkbox:checked{background:var(--ink);border-color:var(--ink)}
+  .cds-checkbox:checked::after{content:'';position:absolute;left:4.5px;top:1.5px;width:4px;height:8px;border:solid #fff;border-width:0 1.8px 1.8px 0;transform:rotate(45deg)}
+  .cds-checkbox:focus-visible{outline:2px solid var(--interactive);outline-offset:1px}
+
+  section.pkg{background:var(--layer);border:1px solid var(--border);margin-bottom:.75rem}
+  section.pkg.selected{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+  .pkg-head{display:flex;align-items:flex-start;gap:.875rem;padding:.875rem 1rem;cursor:pointer}
+  .pkg-head:hover{background:#fafafa}
+  .pkg-main{flex:1;min-width:0}
+  .pkg-title-row{display:flex;align-items:center;gap:.625rem;flex-wrap:wrap}
+  .pkg-title{font-size:1rem;line-height:1.375rem;font-weight:600}
+  .pkg-scope{color:var(--ink2);font-size:.8125rem;margin-top:.25rem;max-width:36rem}
+  .pkg-count{font-size:.75rem;color:var(--ink3);margin-top:.25rem}
+  .pkg-price{text-align:right;flex:none}
+  .pkg-price .pp{font-size:1.125rem;font-weight:400;white-space:nowrap}
+  .pkg.selected .pkg-price .pp{font-weight:600}
+  .pkg-price .pl{font-size:.6875rem;color:var(--ink3);margin-top:.125rem}
+
+  .summary{background:var(--layer);border:1px solid var(--border);margin-top:1.25rem}
+  .summary .s-head{padding:.875rem 1rem;border-bottom:1px solid var(--border);font-weight:600}
+  .s-total{display:flex;align-items:baseline;gap:.75rem;padding:.875rem 1rem;border-bottom:1px solid var(--border)}
+  .s-total .t-label{flex:1;font-weight:600}
+  .s-total .t-amount{font-size:1.625rem;font-weight:300}
+  .s-total .t-amount small{font-size:.8125rem;color:var(--ink2);font-weight:400}
+  .s-pay{display:flex;gap:1px;background:var(--border)}
+  .s-pay .p-col{flex:1;background:var(--layer);padding:.75rem 1rem}
+  .s-pay .p-col .p-label{font-size:.75rem;color:var(--ink2)}
+  .s-pay .p-col .p-amt{font-size:1.125rem;font-weight:600;margin-top:.25rem}
+  .s-pay .p-col .p-when{font-size:.6875rem;color:var(--ink3);margin-top:.125rem}
+
+  .terms{margin-top:1rem;color:var(--ink3);font-size:.75rem;line-height:1.5}
+
+  @media(max-width:560px){.pkg-head{flex-wrap:wrap}.pkg-price{text-align:left}}
+  @media print{
+    body{background:#fff}
+    .shell{background:#161616;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .wrap{padding:1rem 0}
+    section.pkg,.summary{break-inside:avoid}
+  }
+</style>
+</head>
+<body>
+<header class="shell">
+  <div class="name"><span class="prefix">MG Cars</span> SEO Improvement Proposal</div>
+  <div class="spacer"></div>
+  <div class="meta num">www.mgcars.com · 20 ส.ค. 2026</div>
+</header>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="label-01">SEO AUDIT &amp; QUOTATION</div>
+    <h1>ข้อเสนอปรับปรุงคุณภาพ SEO — www.mgcars.com</h1>
+    <div class="sub">จากผลตรวจสอบเว็บไซต์ทั้งระบบ (Site Audit) วันที่ 20 สิงหาคม 2026 · จัดลำดับความสำคัญ P1 → P4 · ยืนราคาถึง 19 กันยายน 2026</div>
+  </div>
+
+  <div id="sections"></div>
+
+  <div class="summary">
+    <div class="s-head">สรุปราคาตามแพ็กเกจที่เลือก</div>
+    <div class="s-total">
+      <div class="t-label">ราคารวม</div>
+      <div class="t-amount num" id="s-total">฿0 <small>(ไม่รวม VAT 7%)</small></div>
+    </div>
+    <div class="s-pay">
+      <div class="p-col">
+        <div class="p-label">งวดที่ 1 — 50%</div>
+        <div class="p-amt num" id="pay1">฿0</div>
+        <div class="p-when">ชำระเมื่อยืนยันเริ่มงาน</div>
+      </div>
+      <div class="p-col">
+        <div class="p-label">งวดที่ 2 — 50%</div>
+        <div class="p-amt num" id="pay2">฿0</div>
+        <div class="p-when">ชำระเมื่อส่งมอบงานครบถ้วน</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="terms">
+    ทุกแพ็กเกจรวมการทดสอบ (QA), รายงานผลหลังส่งมอบ และรับประกันผลงาน 30 วัน · เงื่อนไขการชำระเงินแบ่งเป็น 2 งวด (50/50) · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 กันยายน 2026
+  </div>
+</div>
+
+<script>
+const PKGS = [
+  {id:'p1', tag:'red', tagLabel:'P1 · Critical', title:'แก้หน้า Error 500', free:true, price:0, checked:true,
+   scope:'กู้คืนหน้าทดลองขับ / จองออนไลน์ / สถานีชาร์จ / คำนวณราคา ที่เข้าไม่ได้ทั้งหมด · จัดการหน้าเก่าที่ยกเลิกแล้วให้ redirect ถูกต้อง · ตรวจสอบซ้ำทั้งเว็บไซต์หลังแก้ไข',
+   count:'80 หน้า · มีลิงก์ชี้เข้า 1,100 จุด · งานเร่งด่วน ดำเนินการทันที'},
+  {id:'p2', tag:'magenta', tagLabel:'P2 · High', title:'จัดการหน้าซ้ำ + Canonical ทั้งระบบ', price:75000, checked:false,
+   scope:'ติดตั้ง Canonical URL ครบทุกหน้า รวมคะแนน SEO ที่กระจายจาก URL โฆษณา (gclid / fbclid) กลับมาที่หน้าหลัก · รวม URL ที่สะกดต่างกันด้วย 301 Redirect',
+   count:'74 URLs · 21 หน้าหลัก · ตรวจสอบซ้ำด้วยการ crawl เต็มระบบหลังส่งมอบ'},
+  {id:'p3', tag:'blue', tagLabel:'P3 · Medium', title:'ปรับความเร็วเว็บไซต์ + มาตรฐาน Metadata', price:240000, checked:false,
+   scope:'ปรับความเร็วการโหลด (Core Web Vitals) เริ่มจากหน้าผู้เข้าชมสูงสุด · เพิ่ม Alt Text ให้รูปภาพครบถ้วน · ปรับ Social Sharing Metadata (Open Graph) ให้สมบูรณ์ทุกหน้า',
+   count:'Slow 114 · Alt 44 · OG 117 · วัดผลก่อน–หลังพร้อมรายงานเปรียบเทียบ'},
+  {id:'p4', tag:'gray', tagLabel:'P4 · Standard', title:'ปรับโครงสร้างหัวข้อหน้า (Heading Structure)', price:60000, checked:false,
+   scope:'จัดโครงสร้างหัวข้อ (H1) ให้ถูกต้องตามแนวทางของ Google ทั้ง 59 หน้า โดยไม่กระทบดีไซน์ที่แสดงผล',
+   count:'59 หน้า · 23 กลุ่มหน้าหลัก · ตรวจสอบซ้ำหลังส่งมอบ'},
+];
+
+const fmt = n => n.toLocaleString('th-TH');
+const baht = n => '฿' + fmt(n);
+
+document.getElementById('sections').innerHTML = PKGS.map(p=>`
+  <section class="pkg ${p.checked?'selected':''}" id="pkg-${p.id}">
+    <label class="pkg-head" for="cb-${p.id}">
+      <input type="checkbox" class="cds-checkbox" id="cb-${p.id}" data-pkg="${p.id}" ${p.checked?'checked':''}>
+      <div class="pkg-main">
+        <div class="pkg-title-row">
+          <span class="tag ${p.tag}">${p.tagLabel}</span>
+          <span class="pkg-title">${p.title}</span>
+          ${p.free?'<span class="tag green">ฟรี</span>':''}
+        </div>
+        <div class="pkg-scope">${p.scope}</div>
+        <div class="pkg-count num">${p.count}</div>
+      </div>
+      <div class="pkg-price">
+        <div class="pp num">${p.free?'ฟรี':baht(p.price)}</div>
+        <div class="pl">${p.free?'ไม่มีค่าใช้จ่าย':'รวม QA และรายงานผล'}</div>
+      </div>
+    </label>
+  </section>`).join('');
+
+const state = Object.fromEntries(PKGS.map(p=>[p.id, p.checked]));
+function refresh(){
+  let total = 0;
+  PKGS.forEach(p=>{
+    if(state[p.id]) total += p.price;
+    document.getElementById('pkg-'+p.id).classList.toggle('selected', state[p.id]);
+  });
+  document.getElementById('s-total').innerHTML = baht(total) + ' <small>(ไม่รวม VAT 7%)</small>';
+  document.getElementById('pay1').textContent = baht(total/2);
+  document.getElementById('pay2').textContent = baht(total/2);
+}
+document.addEventListener('change', e=>{
+  if(!e.target.matches('input.cds-checkbox')) return;
+  state[e.target.dataset.pkg] = e.target.checked;
+  refresh();
+});
+refresh();
+</script>
+</body>
+</html>
