@@ -67,6 +67,9 @@
 
   .summary{background:var(--layer);border:1px solid var(--border);margin-top:1.25rem}
   .summary .s-head{padding:.875rem 1rem;border-bottom:1px solid var(--border);font-weight:600}
+  .summary .s-row{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-bottom:1px solid var(--border);font-size:.875rem}
+  .summary .s-row .s-name{flex:1}
+  .summary .s-row .s-price{font-variant-numeric:tabular-nums;text-align:right}
   .s-total{display:flex;align-items:baseline;gap:.75rem;padding:.875rem 1rem;border-bottom:1px solid var(--border)}
   .s-total .t-label{flex:1;font-weight:600}
   .s-total .t-amount{font-size:1.625rem;font-weight:300}
@@ -134,9 +137,18 @@
 
   <div class="summary">
     <div class="s-head">สรุปราคาตามแพ็กเกจที่เลือก</div>
+    <div class="s-row" id="s-discount" style="display:none">
+      <span class="tag green">ส่วนลด</span>
+      <span class="s-name">เลือกครบทุกแพ็กเกจ — ส่วนลด 20%</span>
+      <span class="s-price num" id="s-discount-amt" style="color:#0e6027"></span>
+    </div>
     <div class="s-total">
       <div class="t-label">ราคารวม</div>
       <div class="t-amount num" id="s-total">฿0 <small>(ไม่รวม VAT 7%)</small></div>
+    </div>
+    <div class="s-row" style="border-bottom:none;border-top:1px solid var(--border)">
+      <span class="s-name" style="color:var(--ink2)">รวมระยะเวลาดำเนินการ</span>
+      <span class="s-price num" id="s-days" style="font-weight:600"></span>
     </div>
     <div class="s-pay">
       <div class="p-col">
@@ -153,22 +165,22 @@
   </div>
 
   <div class="terms">
-    ทุกแพ็กเกจรวมการทดสอบ (QA), รายงานผลหลังส่งมอบ และรับประกันผลงาน 30 วัน · เงื่อนไขการชำระเงินแบ่งเป็น 2 งวด (50/50) · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 กันยายน 2026
+    ทุกแพ็กเกจรวมการทดสอบ (QA), รายงานผลหลังส่งมอบ และรับประกันผลงาน 30 วัน · เงื่อนไขการชำระเงินแบ่งเป็น 2 งวด (50/50) · รับส่วนลด 20% เมื่อเลือกครบทุกแพ็กเกจ · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 กันยายน 2026
   </div>
 </div>
 
 <script>
 const PKGS = [
-  {id:'p1', tag:'red', tagLabel:'P1 · Critical', title:'แก้หน้า Error 500', free:true, price:0, checked:true,
+  {id:'p1', tag:'red', tagLabel:'P1 · Critical', title:'แก้หน้า Error 500', free:true, price:0, days:5, checked:true,
    scope:'กู้คืนหน้าทดลองขับ / จองออนไลน์ / สถานีชาร์จ / คำนวณราคา ที่เข้าไม่ได้ทั้งหมด · จัดการหน้าเก่าที่ยกเลิกแล้วให้ redirect ถูกต้อง · ตรวจสอบซ้ำทั้งเว็บไซต์หลังแก้ไข',
    count:'80 หน้า · มีลิงก์ชี้เข้า 1,100 จุด · งานเร่งด่วน ดำเนินการทันที'},
-  {id:'p2', tag:'magenta', tagLabel:'P2 · High', title:'จัดการหน้าซ้ำ + Canonical ทั้งระบบ', price:75000, checked:false,
+  {id:'p2', tag:'magenta', tagLabel:'P2 · High', title:'จัดการหน้าซ้ำ + Canonical ทั้งระบบ', price:75000, days:10, checked:false,
    scope:'ติดตั้ง Canonical URL ครบทุกหน้า รวมคะแนน SEO ที่กระจายจาก URL โฆษณา (gclid / fbclid) กลับมาที่หน้าหลัก · รวม URL ที่สะกดต่างกันด้วย 301 Redirect',
    count:'74 URLs · 21 หน้าหลัก · ตรวจสอบซ้ำด้วยการ crawl เต็มระบบหลังส่งมอบ'},
-  {id:'p3', tag:'blue', tagLabel:'P3 · Medium', title:'ปรับความเร็วเว็บไซต์ + มาตรฐาน Metadata', price:240000, checked:false,
+  {id:'p3', tag:'blue', tagLabel:'P3 · Medium', title:'ปรับความเร็วเว็บไซต์ + มาตรฐาน Metadata', price:240000, days:20, checked:false,
    scope:'ปรับความเร็วการโหลด (Core Web Vitals) เริ่มจากหน้าผู้เข้าชมสูงสุด · เพิ่ม Alt Text ให้รูปภาพครบถ้วน · ปรับ Social Sharing Metadata (Open Graph) ให้สมบูรณ์ทุกหน้า',
    count:'Slow 114 · Alt 44 · OG 117 · วัดผลก่อน–หลังพร้อมรายงานเปรียบเทียบ'},
-  {id:'p4', tag:'gray', tagLabel:'P4 · Standard', title:'ปรับโครงสร้างหัวข้อหน้า (Heading Structure)', price:60000, checked:false,
+  {id:'p4', tag:'gray', tagLabel:'P4 · Standard', title:'ปรับโครงสร้างหัวข้อหน้า (Heading Structure)', price:60000, days:7, checked:false,
    scope:'จัดโครงสร้างหัวข้อ (H1) ให้ถูกต้องตามแนวทางของ Google ทั้ง 59 หน้า โดยไม่กระทบดีไซน์ที่แสดงผล',
    count:'59 หน้า · 23 กลุ่มหน้าหลัก · ตรวจสอบซ้ำหลังส่งมอบ'},
 ];
@@ -192,20 +204,27 @@ document.getElementById('sections').innerHTML = PKGS.map(p=>`
       <div class="pkg-price">
         <div class="pp num">${p.free?'ฟรี':baht(p.price)}</div>
         <div class="pl">${p.free?'ไม่มีค่าใช้จ่าย':'รวม QA และรายงานผล'}</div>
+        <div class="pl num">ระยะเวลา ${p.days} วันทำการ</div>
       </div>
     </label>
   </section>`).join('');
 
 const state = Object.fromEntries(PKGS.map(p=>[p.id, p.checked]));
 function refresh(){
-  let total = 0;
+  let total = 0, days = 0;
   PKGS.forEach(p=>{
-    if(state[p.id]) total += p.price;
+    if(state[p.id]){ total += p.price; days += p.days; }
     document.getElementById('pkg-'+p.id).classList.toggle('selected', state[p.id]);
   });
-  document.getElementById('s-total').innerHTML = baht(total) + ' <small>(ไม่รวม VAT 7%)</small>';
-  document.getElementById('pay1').textContent = baht(total/2);
-  document.getElementById('pay2').textContent = baht(total/2);
+  const allSelected = PKGS.every(p=>state[p.id]);
+  const discount = allSelected ? Math.round(total*0.2) : 0;
+  const net = total - discount;
+  document.getElementById('s-discount').style.display = discount ? 'flex' : 'none';
+  document.getElementById('s-discount-amt').textContent = discount ? '−' + baht(discount) : '';
+  document.getElementById('s-total').innerHTML = baht(net) + ' <small>(ไม่รวม VAT 7%)</small>';
+  document.getElementById('pay1').textContent = baht(net/2);
+  document.getElementById('pay2').textContent = baht(net/2);
+  document.getElementById('s-days').textContent = days ? days + ' วันทำการ' : '—';
 }
 document.addEventListener('change', e=>{
   if(!e.target.matches('input.cds-checkbox')) return;
