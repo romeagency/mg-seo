@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>KKP AUTO — AI Search Optimization Quotation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  /* Carbon Design System — White/g10 tokens */
+  :root{
+    --bg:#f4f4f4; --layer:#ffffff; --border:#e0e0e0;
+    --ink:#161616; --ink2:#525252; --ink3:#6f6f6f;
+    --interactive:#0f62fe;
+    --tag-red-bg:#ffd7d9; --tag-red-text:#a2191f;
+    --tag-magenta-bg:#ffd6e8; --tag-magenta-text:#9f1853;
+    --tag-blue-bg:#d0e2ff; --tag-blue-text:#0043ce;
+    --tag-gray-bg:#e0e0e0; --tag-gray-text:#393939;
+    --tag-green-bg:#a7f0ba; --tag-green-text:#0e6027;
+    --font:'IBM Plex Sans','IBM Plex Sans Thai','Helvetica Neue',Arial,sans-serif;
+    --mono:'IBM Plex Mono',Menlo,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{font-size:16px}
+  body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:.875rem;line-height:1.28572}
+  a{color:var(--interactive);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  .shell{background:#161616;height:3rem;display:flex;align-items:center;padding:0 1rem}
+  .shell .name{color:#fff;font-size:.875rem}
+  .shell .name .prefix{font-weight:600;margin-right:.25rem}
+  .shell .spacer{flex:1}
+  .shell .meta{color:#c6c6c6;font-size:.75rem}
+
+  .wrap{max-width:56rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
+
+  .label-01{font-size:.75rem;line-height:1rem;letter-spacing:.32px;color:var(--ink2)}
+  .num{font-variant-numeric:tabular-nums}
+  .page-head{margin-bottom:1.25rem}
+  .page-head h1{font-size:1.75rem;line-height:2.25rem;font-weight:400;margin-top:.375rem}
+  .page-head .sub{color:var(--ink2);margin-top:.375rem;font-size:.8125rem}
+
+  .tag{display:inline-flex;align-items:center;height:1.5rem;padding:0 .5rem;border-radius:1.5rem;font-size:.75rem;letter-spacing:.32px;white-space:nowrap;flex:none}
+  .tag.blue{background:var(--tag-blue-bg);color:var(--tag-blue-text)}
+  .tag.gray{background:var(--tag-gray-bg);color:var(--tag-gray-text)}
+  .tag.green{background:var(--tag-green-bg);color:var(--tag-green-text)}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:1px;background:var(--border);border:1px solid var(--border);margin-bottom:1.5rem}
+  .tile{background:var(--layer);padding:1rem}
+  .tile .t-value{font-size:1.5rem;line-height:2rem;font-weight:300;margin-top:.375rem}
+  .tile .t-detail{font-size:.75rem;color:var(--ink3);margin-top:.25rem}
+
+  .group-head{display:flex;align-items:center;gap:.625rem;margin:1.5rem 0 .625rem}
+  .group-head .g-title{font-size:1rem;font-weight:600}
+
+  section.card{background:var(--layer);border:1px solid var(--border);margin-bottom:.5rem}
+  .card-head{display:flex;align-items:flex-start;gap:.875rem;padding:.75rem 1rem}
+  .card-main{flex:1;min-width:0}
+  .card-title-row{display:flex;align-items:center;gap:.625rem;flex-wrap:wrap}
+  .card-id{font-family:var(--mono);font-size:.6875rem;color:var(--ink3)}
+  .card-title{font-size:.9375rem;line-height:1.375rem;font-weight:600}
+  .card-scope{color:var(--ink2);font-size:.8125rem;margin-top:.25rem;max-width:38rem}
+  .card-count{font-size:.75rem;color:var(--ink3);margin-top:.25rem}
+  .card-price{text-align:right;flex:none;min-width:8rem}
+  .card-price .pp{font-size:1.125rem;font-weight:600;white-space:nowrap}
+  .card-price .pl{font-size:.6875rem;color:var(--ink3);margin-top:.125rem}
+
+  table{width:100%;border-collapse:collapse;font-size:.8125rem;background:var(--layer)}
+  thead th{background:var(--tag-gray-bg);color:var(--ink);font-weight:600;text-align:left;height:2rem;padding:.375rem .75rem;vertical-align:middle}
+  tbody td{padding:.5rem .75rem;border-bottom:1px solid var(--border);color:var(--ink2);vertical-align:top}
+  td.r,th.r{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  td.k{color:var(--ink);font-weight:600}
+  .tbl-wrap{border:1px solid var(--border);margin-bottom:.5rem;overflow-x:auto}
+
+  .summary{background:var(--layer);border:1px solid var(--border);margin-top:1.5rem}
+  .summary .s-head{padding:.875rem 1rem;border-bottom:1px solid var(--border);font-weight:600}
+  .s-total{display:flex;align-items:baseline;gap:.75rem;padding:.875rem 1rem;border-bottom:1px solid var(--border)}
+  .s-total .t-label{flex:1;font-weight:600}
+  .s-total .t-amount{font-size:1.625rem;font-weight:300;font-variant-numeric:tabular-nums}
+  .s-total .t-amount small{font-size:.8125rem;color:var(--ink2);font-weight:400}
+  .s-pay{display:flex;gap:1px;background:var(--border)}
+  .s-pay .p-col{flex:1;background:var(--layer);padding:.75rem 1rem}
+  .s-pay .p-col .p-label{font-size:.75rem;color:var(--ink2)}
+  .s-pay .p-col .p-amt{font-size:1.125rem;font-weight:600;margin-top:.25rem;font-variant-numeric:tabular-nums}
+  .s-pay .p-col .p-when{font-size:.6875rem;color:var(--ink3);margin-top:.125rem}
+
+  .terms{margin-top:1rem;color:var(--ink3);font-size:.75rem;line-height:1.5}
+
+  body.locked>.shell, body.locked>.wrap{display:none}
+  .gate{position:fixed;inset:0;background:#161616;display:none;align-items:center;justify-content:center;z-index:100;padding:1rem}
+  body.locked .gate{display:flex}
+  .gate-card{background:var(--layer);width:100%;max-width:24rem;padding:2rem}
+  .gate-brand{font-size:.75rem;letter-spacing:.32px;color:var(--ink2);margin-bottom:1.5rem}
+  .gate-brand span{font-weight:600;color:var(--ink)}
+  .gate-title{font-size:1.25rem;line-height:1.75rem;font-weight:400}
+  .gate-sub{color:var(--ink2);font-size:.8125rem;margin-top:.375rem;margin-bottom:1.25rem}
+  .gate-input{display:block;width:100%;height:2.5rem;border:none;border-bottom:1px solid #8d8d8d;background:var(--bg);padding:0 1rem;font-family:var(--font);font-size:.875rem;color:var(--ink);outline:none}
+  .gate-input:focus{outline:2px solid var(--interactive);outline-offset:-2px}
+  .gate-btn{display:block;width:100%;height:3rem;margin-top:1rem;background:var(--interactive);color:#fff;border:none;font-family:var(--font);font-size:.875rem;text-align:left;padding:0 1rem;cursor:pointer}
+  .gate-btn:hover{background:#0050e6}
+  .gate-err{display:none;margin-top:.75rem;font-size:.75rem;color:#da1e28}
+  .gate-err.show{display:block}
+
+  @media(max-width:560px){.card-head{flex-wrap:wrap}.card-price{text-align:left}}
+  @media print{body{background:#fff}.shell{background:#161616;-webkit-print-color-adjust:exact;print-color-adjust:exact}section.card,.summary,.tbl-wrap{break-inside:avoid}}
+</style>
+</head>
+<body class="locked">
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-brand"><span>KKP AUTO</span> AI Search Optimization — Quotation</div>
+    <div class="gate-title">กรอกรหัสเพื่อเข้าชมเอกสาร</div>
+    <div class="gate-sub">เอกสารนี้จำกัดการเข้าถึงเฉพาะผู้ที่ได้รับรหัส</div>
+    <form id="gate-form">
+      <input type="password" id="gate-input" class="gate-input" placeholder="Access code" autocomplete="off" autofocus>
+      <button type="submit" class="gate-btn">เข้าชมเอกสาร</button>
+    </form>
+    <div class="gate-err" id="gate-err">รหัสไม่ถูกต้อง กรุณาลองใหม่</div>
+  </div>
+</div>
+<header class="shell">
+  <div class="name"><span class="prefix">KKP AUTO</span> AI Search Optimization (LLMO / GEO) — Quotation</div>
+  <div class="spacer"></div>
+  <div class="meta">🎖️ ROME AGENCY</div>
+</header>
+
+<div class="wrap">
+  <div class="page-head">
+    <div class="label-01">QUOTATION · ใบเสนอราคา</div>
+    <h1>AI Search Optimization (LLMO / GEO) — KKP AUTO</h1>
+    <div class="sub">Consulting / Advisory Engagement ระยะเวลา 6 เดือน · ครอบคลุม Scope, Timeline &amp; Commercial · ทีม Website Development ของ KKP AUTO เป็นผู้ดำเนินการ implement (coding / CMS / deployment) ตามคำแนะนำที่ส่งมอบ</div>
+  </div>
+
+  <div class="tiles">
+    <div class="tile"><div class="label-01">Professional Fee</div><div class="t-value num">฿98,000</div><div class="t-detail">Engagement เดียวแบบ integrated · 6 เดือน</div></div>
+    <div class="tile"><div class="label-01">Priority Pages</div><div class="t-value num">15</div><div class="t-detail">รีวิว URL เดิมเชิงลึก</div></div>
+    <div class="tile"><div class="label-01">Content Briefs</div><div class="t-value num">10</div><div class="t-detail">โอกาสคอนเทนต์ใหม่</div></div>
+    <div class="tile"><div class="label-01">Prompt Universe</div><div class="t-value num">50</div><div class="t-detail">Thai-market prompts · Tier-1 15 prompts/เดือน</div></div>
+    <div class="tile"><div class="label-01">QA Cycles</div><div class="t-value num">2</div><div class="t-detail">Implementation review · consulting ≤55 ชม.</div></div>
+  </div>
+
+  <div class="group-head"><span class="tag blue">Scope</span><span class="g-title">Workstreams &amp; Fee Allocation</span></div>
+  <div id="ws"></div>
+
+  <div class="group-head"><span class="tag blue">Timeline</span><span class="g-title">แผนงาน 6 เดือน</span></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>เดือน</th><th>โฟกัสหลัก</th><th>Deliverables หลัก</th></tr></thead>
+    <tbody>
+      <tr><td class="k">M1</td><td>Baseline &amp; Discovery — kickoff, audit, 50-prompt framework, full baseline</td><td>Readiness Assessment · Visibility Baseline · Competitor Benchmark · Gap Matrix</td></tr>
+      <tr><td class="k">M2</td><td>Strategy &amp; Architecture — journey mapping, topic/prompt clusters, citation gap</td><td>Opportunity Map · Topic Clusters · AI Content Architecture</td></tr>
+      <tr><td class="k">M3</td><td>Website &amp; Content Recommendations + midpoint benchmark (50 prompts)</td><td>Technical Recommendation Package · Page Matrix · Midpoint Benchmark</td></tr>
+      <tr><td class="k">M4</td><td>Implementation Guidance &amp; QA cycle 1 · monthly Tier-1 monitoring</td><td>QA Report 1 · Content Briefs · AI Content Guidelines</td></tr>
+      <tr><td class="k">M5</td><td>Authority &amp; Optimization · entity/authority gap · QA cycle 2</td><td>Entity Recommendations · Citation Opportunity List · QA Report 2</td></tr>
+      <tr><td class="k">M6</td><td>Final Benchmark &amp; Handover — baseline vs final, executive review</td><td>Final AI Search Benchmark · Executive Summary · Next-quarter Roadmap</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="group-head"><span class="tag gray">Optional</span><span class="g-title">Optional / Overage Services</span></div>
+  <div class="tbl-wrap"><table>
+    <thead><tr><th>บริการเพิ่มเติม</th><th class="r">ราคา</th></tr></thead>
+    <tbody>
+      <tr><td>รีวิวหน้าเดิมเพิ่มเติม</td><td class="r">฿1,800 / หน้า</td></tr>
+      <tr><td>AI Search content brief เพิ่มเติม</td><td class="r">฿3,500 / brief</td></tr>
+      <tr><td>Implementation QA cycle เพิ่มเติม</td><td class="r">฿5,000 / cycle</td></tr>
+      <tr><td>Workshop / consulting session เพิ่มเติม</td><td class="r">฿5,000 / session</td></tr>
+      <tr><td>Consulting เพิ่มเติม</td><td class="r">฿2,500 / ชั่วโมง</td></tr>
+      <tr><td>Content writing / publishing เต็มรูปแบบ · Digital PR execution · Monitoring เพิ่มเติม</td><td class="r">เสนอราคาแยก</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="summary">
+    <div class="s-head">Commercial Summary</div>
+    <div class="s-total">
+      <div class="t-label">Total Professional Fee <span style="font-weight:400;color:var(--ink3);font-size:.75rem">(integrated engagement · 6 เดือน)</span></div>
+      <div class="t-amount num">฿98,000 <small>(ไม่รวม VAT 7%)</small></div>
+    </div>
+    <div class="s-pay">
+      <div class="p-col">
+        <div class="p-label">งวดที่ 1 — 40%</div>
+        <div class="p-amt num">฿39,200</div>
+        <div class="p-when">เมื่อเริ่มโปรเจกต์ (Project commencement)</div>
+      </div>
+      <div class="p-col">
+        <div class="p-label">งวดที่ 2 — 30%</div>
+        <div class="p-amt num">฿29,400</div>
+        <div class="p-when">เมื่อจบ Month 3 (Midpoint benchmark)</div>
+      </div>
+      <div class="p-col">
+        <div class="p-label">งวดที่ 3 — 30%</div>
+        <div class="p-amt num">฿29,400</div>
+        <div class="p-when">เมื่อจบ Month 6 (Final benchmark)</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="terms">
+    Fee allocation ต่อ workstream แสดงเพื่อความโปร่งใสเชิงพาณิชย์ ไม่ใช่ราคาแยกรายการ · ไม่รวมงาน coding / CMS / deployment, การเขียนและเผยแพร่คอนเทนต์เต็มรูปแบบ, Digital PR execution และ subscription ของ third-party · Vendor ไม่การันตีอันดับ, AI citations, traffic หรือรายได้ — วัดผลเทียบ baseline ด้วย prompt กลุ่มเดิมแบบ repeatable · ราคาไม่รวม VAT 7%
+  </div>
+</div>
+
+<script>
+const WS = [
+  {id:'WS-1', title:'AI Search Readiness & Baseline Assessment', fee:18000, model:'One-time',
+   scope:'LLMO readiness audit · crawlability / indexability · structured data · content & citation readiness · entity / authority review · competitor baseline',
+   out:'Readiness Assessment · Visibility Baseline · Competitor Benchmark · Gap & Priority Matrix · 6-Month Roadmap'},
+  {id:'WS-2', title:'AI Search Strategy & Topic Opportunity', fee:12000, model:'One-time',
+   scope:'Customer journey & intent mapping · priority AI questions · topic clusters · competitor citation gaps · content architecture',
+   out:'Opportunity Map · Priority Topic/Prompt Clusters · Citation Gap Analysis · Prioritized Content Roadmap'},
+  {id:'WS-3', title:'LLMO / GEO Website Recommendations', fee:12000, model:'One-time',
+   scope:'Implementation-ready recommendations: page structure, answer blocks, FAQ, internal linking, schema, entity relationships, canonicalization, AI accessibility',
+   out:'Technical Recommendation Package · Implementation Priority Matrix · Acceptance Criteria'},
+  {id:'WS-4', title:'AI Content Optimization Framework', fee:18000, model:'Package',
+   scope:'รีวิวหน้า priority เดิมสูงสุด 15 หน้า · direct-answer opportunities · FAQ · trust signals · content brief ใหม่สูงสุด 10 ชิ้น',
+   out:'15 Priority Page Reviews · 10 AI Search Content Briefs · AI Search Content Guidelines'},
+  {id:'WS-5', title:'Entity, Authority & Citation Strategy', fee:8000, model:'One-time',
+   scope:'Brand/product entity consistency · authority gap analysis · third-party citation opportunities · digital PR opportunity recommendations',
+   out:'Entity Recommendations · Authority Gap Analysis · Citation Opportunity List'},
+  {id:'WS-6', title:'AI Search Measurement, Consulting & QA', fee:30000, model:'6-month engagement',
+   scope:'Fixed 50-prompt universe · Tier-1 15 prompts รายเดือน · full benchmark ที่ M1/M3/M6 · Share of AI Voice · monthly working sessions 6 ครั้ง · QA 2 cycles',
+   out:'50-Prompt Framework · Monthly Monitoring Reports · Midpoint & Final Benchmark · Executive Review'},
+];
+const baht = n => '฿' + n.toLocaleString('th-TH');
+document.getElementById('ws').innerHTML = WS.map(w=>`
+  <section class="card"><div class="card-head">
+    <div class="card-main">
+      <div class="card-title-row"><span class="card-id">${w.id}</span><span class="card-title">${w.title}</span></div>
+      <div class="card-scope">${w.scope}</div>
+      <div class="card-count">Deliverables: ${w.out}</div>
+    </div>
+    <div class="card-price"><div class="pp num">${baht(w.fee)}</div><div class="pl">${w.model}</div></div>
+  </div></section>`).join('');
+
+(function(){
+  const CODE = 'dmstaff';
+  const form = document.getElementById('gate-form');
+  const input = document.getElementById('gate-input');
+  const err = document.getElementById('gate-err');
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    if(input.value.trim().toLowerCase() === CODE){
+      document.body.classList.remove('locked');
+    }else{
+      err.classList.add('show');
+      input.value=''; input.focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>

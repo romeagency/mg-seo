@@ -4,287 +4,59 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>MG Cars — Technical SEO Quotation</title>
+<title>ROME AGENCY — Quotations</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
 <style>
-  /* Carbon Design System — White/g10 tokens */
   :root{
     --bg:#f4f4f4; --layer:#ffffff; --border:#e0e0e0;
-    --ink:#161616; --ink2:#525252; --ink3:#6f6f6f;
-    --interactive:#0f62fe;
-    --tag-red-bg:#ffd7d9; --tag-red-text:#a2191f;
-    --tag-magenta-bg:#ffd6e8; --tag-magenta-text:#9f1853;
-    --tag-blue-bg:#d0e2ff; --tag-blue-text:#0043ce;
-    --tag-gray-bg:#e0e0e0; --tag-gray-text:#393939;
-    --tag-green-bg:#a7f0ba; --tag-green-text:#0e6027;
+    --ink:#161616; --ink2:#525252; --ink3:#6f6f6f; --interactive:#0f62fe;
     --font:'IBM Plex Sans','IBM Plex Sans Thai','Helvetica Neue',Arial,sans-serif;
-    --mono:'IBM Plex Mono',Menlo,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{font-size:16px}
   body{font-family:var(--font);background:var(--bg);color:var(--ink);font-size:.875rem;line-height:1.28572}
-
   .shell{background:#161616;height:3rem;display:flex;align-items:center;padding:0 1rem}
   .shell .name{color:#fff;font-size:.875rem}
   .shell .name .prefix{font-weight:600;margin-right:.25rem}
   .shell .spacer{flex:1}
   .shell .meta{color:#c6c6c6;font-size:.75rem}
-
-  .wrap{max-width:56rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
-
-  .label-01{font-size:.75rem;line-height:1rem;letter-spacing:.32px;color:var(--ink2)}
-  .num{font-variant-numeric:tabular-nums}
-  .page-head{margin-bottom:1.25rem}
-  .page-head h1{font-size:1.75rem;line-height:2.25rem;font-weight:400;margin-top:.375rem}
-  .page-head .sub{color:var(--ink2);margin-top:.375rem;font-size:.8125rem}
-
-  .tag{display:inline-flex;align-items:center;height:1.5rem;padding:0 .5rem;border-radius:1.5rem;font-size:.75rem;letter-spacing:.32px;white-space:nowrap;flex:none}
-  .tag.red{background:var(--tag-red-bg);color:var(--tag-red-text)}
-  .tag.magenta{background:var(--tag-magenta-bg);color:var(--tag-magenta-text)}
-  .tag.blue{background:var(--tag-blue-bg);color:var(--tag-blue-text)}
-  .tag.gray{background:var(--tag-gray-bg);color:var(--tag-gray-text)}
-  .tag.green{background:var(--tag-green-bg);color:var(--tag-green-text)}
-
-  .group-head{display:flex;align-items:center;gap:.625rem;margin:1.5rem 0 .625rem}
-  .group-head:first-child{margin-top:0}
-  .group-head .g-title{font-size:1rem;font-weight:600}
-  .group-head .g-count{font-size:.75rem;color:var(--ink3)}
-
-  .cds-checkbox{appearance:none;-webkit-appearance:none;width:1rem;height:1rem;border:1px solid var(--ink);border-radius:1px;background:transparent;cursor:pointer;position:relative;flex:none;margin-top:.1875rem}
-  .cds-checkbox:checked{background:var(--ink);border-color:var(--ink)}
-  .cds-checkbox:checked::after{content:'';position:absolute;left:4.5px;top:1.5px;width:4px;height:8px;border:solid #fff;border-width:0 1.8px 1.8px 0;transform:rotate(45deg)}
-  .cds-checkbox:focus-visible{outline:2px solid var(--interactive);outline-offset:1px}
-
-  section.pkg{background:var(--layer);border:1px solid var(--border);margin-bottom:.5rem}
-  section.pkg.selected{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-  .pkg-head{display:flex;align-items:flex-start;gap:.875rem;padding:.75rem 1rem;cursor:pointer}
-  .pkg-head:hover{background:#fafafa}
-  .pkg-main{flex:1;min-width:0}
-  .pkg-title-row{display:flex;align-items:center;gap:.625rem;flex-wrap:wrap}
-  .pkg-id{font-family:var(--mono);font-size:.6875rem;color:var(--ink3)}
-  .pkg-title{font-size:.9375rem;line-height:1.375rem;font-weight:600}
-  .pkg-scope{color:var(--ink2);font-size:.8125rem;margin-top:.25rem;max-width:38rem}
-  .pkg-count{font-size:.75rem;color:var(--ink3);margin-top:.25rem}
-  .pkg-price{text-align:right;flex:none;min-width:8.5rem}
-  .pkg-price .pp{font-size:1.125rem;font-weight:400;white-space:nowrap}
-  .pkg.selected .pkg-price .pp{font-weight:600}
-  .pkg-price .pl{font-size:.6875rem;color:var(--ink3);margin-top:.125rem}
-
-  .summary{background:var(--layer);border:1px solid var(--border);margin-top:1.5rem}
-  .summary .s-head{padding:.875rem 1rem;border-bottom:1px solid var(--border);font-weight:600}
-  .summary .s-row{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-bottom:1px solid var(--border);font-size:.875rem}
-  .summary .s-row .s-name{flex:1}
-  .summary .s-row .s-price{font-variant-numeric:tabular-nums;text-align:right}
-  .s-total{display:flex;align-items:baseline;gap:.75rem;padding:.875rem 1rem;border-bottom:1px solid var(--border)}
-  .s-total .t-label{flex:1;font-weight:600}
-  .s-total .t-amount{font-size:1.625rem;font-weight:300}
-  .s-total .t-amount small{font-size:.8125rem;color:var(--ink2);font-weight:400}
-  .s-pay{display:flex;gap:1px;background:var(--border)}
-  .s-pay .p-col{flex:1;background:var(--layer);padding:.75rem 1rem}
-  .s-pay .p-col .p-label{font-size:.75rem;color:var(--ink2)}
-  .s-pay .p-col .p-amt{font-size:1.125rem;font-weight:600;margin-top:.25rem}
-  .s-pay .p-col .p-when{font-size:.6875rem;color:var(--ink3);margin-top:.125rem}
-
-  .terms{margin-top:1rem;color:var(--ink3);font-size:.75rem;line-height:1.5}
-
-  /* ===== access gate ===== */
-  body.locked>.shell, body.locked>.wrap{display:none}
-  .gate{position:fixed;inset:0;background:#161616;display:none;align-items:center;justify-content:center;z-index:100;padding:1rem}
-  body.locked .gate{display:flex}
-  .gate-card{background:var(--layer);width:100%;max-width:24rem;padding:2rem}
-  .gate-brand{font-size:.75rem;letter-spacing:.32px;color:var(--ink2);margin-bottom:1.5rem}
-  .gate-brand span{font-weight:600;color:var(--ink)}
-  .gate-title{font-size:1.25rem;line-height:1.75rem;font-weight:400}
-  .gate-sub{color:var(--ink2);font-size:.8125rem;margin-top:.375rem;margin-bottom:1.25rem}
-  .gate-input{display:block;width:100%;height:2.5rem;border:none;border-bottom:1px solid #8d8d8d;background:var(--bg);padding:0 1rem;font-family:var(--font);font-size:.875rem;color:var(--ink);outline:none}
-  .gate-input:focus{outline:2px solid var(--interactive);outline-offset:-2px}
-  .gate-btn{display:block;width:100%;height:3rem;margin-top:1rem;background:var(--interactive);color:#fff;border:none;font-family:var(--font);font-size:.875rem;text-align:left;padding:0 1rem;cursor:pointer}
-  .gate-btn:hover{background:#0050e6}
-  .gate-err{display:none;margin-top:.75rem;font-size:.75rem;color:#da1e28}
-  .gate-err.show{display:block}
-
-  @media(max-width:560px){.pkg-head{flex-wrap:wrap}.pkg-price{text-align:left}}
-  @media print{
-    body{background:#fff}
-    .shell{background:#161616;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    .wrap{padding:1rem 0}
-    section.pkg,.summary{break-inside:avoid}
-  }
+  .wrap{max-width:40rem;margin:0 auto;padding:2.5rem 1rem}
+  .label-01{font-size:.75rem;letter-spacing:.32px;color:var(--ink2)}
+  h1{font-size:1.75rem;line-height:2.25rem;font-weight:400;margin-top:.375rem;margin-bottom:1.5rem}
+  a.card{display:flex;align-items:center;gap:1rem;background:var(--layer);border:1px solid var(--border);padding:1rem;margin-bottom:.5rem;color:var(--ink);text-decoration:none}
+  a.card:hover{border-color:var(--ink)}
+  .c-main{flex:1}
+  .c-title{font-weight:600}
+  .c-sub{color:var(--ink3);font-size:.75rem;margin-top:.25rem}
+  .c-arrow{color:var(--interactive);font-size:1rem}
+  footer{color:var(--ink3);font-size:.75rem;margin-top:2rem}
 </style>
 </head>
-<body class="locked">
-<div class="gate" id="gate">
-  <div class="gate-card">
-    <div class="gate-brand"><span>MG Cars</span> Technical SEO — Quotation</div>
-    <div class="gate-title">กรอกรหัสเพื่อเข้าชมเอกสาร</div>
-    <div class="gate-sub">เอกสารนี้จำกัดการเข้าถึงเฉพาะผู้ที่ได้รับรหัส</div>
-    <form id="gate-form">
-      <input type="password" id="gate-input" class="gate-input" placeholder="Access code" autocomplete="off" autofocus>
-      <button type="submit" class="gate-btn">เข้าชมเอกสาร</button>
-    </form>
-    <div class="gate-err" id="gate-err">รหัสไม่ถูกต้อง กรุณาลองใหม่</div>
-  </div>
-</div>
+<body>
 <header class="shell">
-  <div class="name"><span class="prefix">MG Cars</span> Technical SEO — Quotation</div>
+  <div class="name"><span class="prefix">🎖️ ROME AGENCY</span> Quotations</div>
   <div class="spacer"></div>
-  <div class="meta">🎖️ ROME AGENCY</div>
 </header>
-
 <div class="wrap">
-  <div class="page-head">
-    <div class="label-01">QUOTATION · ใบเสนอราคา</div>
-    <h1>ใบเสนอราคาแก้ไข Technical SEO — www.mgcars.com</h1>
-    <div class="sub">รายการอ้างอิงจากผล SEO Audit วันที่ 20 สิงหาคม 2026 (10 รายการ) · เลือกรายการที่ต้องการ ราคารวมและระยะเวลาจะสรุปด้านล่าง · ราคาสะท้อนรูปแบบการทำงาน — งานที่ AI ดำเนินการได้จบราคาย่อมเยา ส่วนงานที่ต้องใช้ทีมงานเฉพาะทางหรือประชุมร่วมกับทีม MG ราคาสูงขึ้นตามชั่วโมงงานจริง · ยืนราคาถึง 19 กันยายน 2026</div>
-  </div>
-
-  <div id="sections"></div>
-
-  <div class="summary">
-    <div class="s-head">สรุปราคาตามรายการที่เลือก</div>
-    <div class="s-row" id="s-discount" style="display:none">
-      <span class="tag green">ส่วนลด</span>
-      <span class="s-name">เลือกครบทุกรายการ — ส่วนลด 20%</span>
-      <span class="s-price num" id="s-discount-amt" style="color:#0e6027"></span>
+  <div class="label-01">CLIENT QUOTATIONS</div>
+  <h1>ใบเสนอราคา</h1>
+  <a class="card" href="/mg-seo">
+    <div class="c-main">
+      <div class="c-title">MG Cars — Technical SEO</div>
+      <div class="c-sub">www.mgcars.com · 10 รายการจาก SEO Audit · ส.ค. 2026</div>
     </div>
-    <div class="s-total">
-      <div class="t-label">ราคารวม <span id="s-sel" class="num" style="font-weight:400;color:var(--ink3);font-size:.75rem"></span></div>
-      <div class="t-amount num" id="s-total">฿0 <small>(ไม่รวม VAT 7%)</small></div>
+    <span class="c-arrow">→</span>
+  </a>
+  <a class="card" href="/kkp">
+    <div class="c-main">
+      <div class="c-title">KKP AUTO — AI Search Optimization (LLMO / GEO)</div>
+      <div class="c-sub">Consulting engagement 6 เดือน · ส.ค. 2026</div>
     </div>
-    <div class="s-row" style="border-bottom:1px solid var(--border)">
-      <span class="s-name" style="color:var(--ink2)">รวมระยะเวลาดำเนินการ</span>
-      <span class="s-price num" id="s-days" style="font-weight:600"></span>
-    </div>
-    <div class="s-pay">
-      <div class="p-col">
-        <div class="p-label">งวดที่ 1 — 50%</div>
-        <div class="p-amt num" id="pay1">฿0</div>
-        <div class="p-when">ชำระเมื่อยืนยันเริ่มงาน</div>
-      </div>
-      <div class="p-col">
-        <div class="p-label">งวดที่ 2 — 50%</div>
-        <div class="p-amt num" id="pay2">฿0</div>
-        <div class="p-when">ชำระเมื่อส่งมอบงานครบถ้วน</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="terms">
-    ทุกรายการรวมการทดสอบ (QA) · เงื่อนไขการชำระเงินแบ่งเป็น 2 งวด (50/50) · รับส่วนลด 20% เมื่อเลือกครบทุกรายการ · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 กันยายน 2026
-  </div>
+    <span class="c-arrow">→</span>
+  </a>
+  <footer>เอกสารแต่ละฉบับต้องใช้รหัสเข้าชม · ROME AGENCY</footer>
 </div>
-
-<script>
-const GROUPS = [
-  {key:'critical', tag:'red',     label:'Critical', title:'Critical — กระทบการมองเห็นและการขายโดยตรง'},
-  {key:'high',     tag:'magenta', label:'High',     title:'High — กระทบอันดับและความถูกต้องของ index'},
-  {key:'medium',   tag:'gray',    label:'Medium',   title:'Medium — ยกระดับคุณภาพและการแชร์'},
-];
-
-const TASKS = [
-  {id:'t1', tsk:'TSK-001', group:'critical', title:'แก้ HTTP 500 บนหน้าเงินหลัก 35 URL', free:true, price:0, days:5, checked:true, due:'31 ส.ค.',
-   scope:'หน้า /cars, /promotions, /online-booking, /after-services คืนสถานะ 500 ให้ crawler — แก้ที่ระดับ server/rendering ไม่ใช่แค่ redirect เพื่อให้ Googlebot และ AI crawler อ่านหน้าเงินหลักได้',
-   count:'35 URL · มี internal link ชี้เข้า 1,185 จุด · งานเร่งด่วน ดำเนินการทันที'},
-  {id:'t2', tsk:'TSK-002', group:'critical', title:'ติดตั้ง hreflang ทั้งเว็บ (th / en / x-default)', price:70000, days:7, mode:'hybrid', checked:false, due:'31 ส.ค.',
-   scope:'เพิ่ม hreflang แบบ reciprocal ทุกหน้าที่มีคู่ TH/EN และเพิ่มใน sitemap เพื่อให้ Google เลือกเวอร์ชันภาษาถูกต้องใน SERP (ปัจจุบัน /en ได้ 1.29M impressions แต่ CTR ต่ำกว่าปกติ)',
-   count:'ทุกหน้าที่มีคู่ภาษา + sitemap'},
-  {id:'t3', tsk:'TSK-003', group:'critical', title:'เปิด AI crawler ใน robots.txt + สร้าง /llms.txt', price:15000, days:2, mode:'ai', checked:false, due:'20 ส.ค.',
-   scope:'อนุญาต GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, Applebot-Extended และสร้าง llms.txt ชี้ไปหน้าข้อมูลรุ่นรถ/ราคา/สเปก — ปัจจุบัน AI ตอบคำถามเกี่ยวกับ MG โดยอ้างอิงเว็บอื่นแทน mgcars.com',
-   count:'robots.txt + /llms.txt'},
-  {id:'t4', tsk:'TSK-004', group:'high', title:'แก้ duplicate content 76 URL ที่ไม่มี canonical', price:60000, days:7, mode:'hybrid', checked:false, due:'15 ก.ย.',
-   scope:'กำหนด canonical ให้ทุกกลุ่มหน้าที่เนื้อหาซ้ำ (หน้ารุ่นรถมีถึง 3 variant) และตัด parameter URL ออกจาก sitemap เพื่อรวม link equity กลับหน้าเดียวและลด crawl budget ที่เสียไป',
-   count:'76 URL · ตรวจสอบซ้ำด้วยการ crawl เต็มระบบ'},
-  {id:'t5', tsk:'TSK-007', group:'high', title:'แก้หน้าโหลดช้า 48 URL (TTFB สูง)', price:180000, days:15, mode:'human', checked:false, due:'30 ก.ย.',
-   scope:'TTFB เป็นสัดส่วนใหญ่ของ load time — แก้ที่ฝั่ง server/CDN ด้วย cache layer และ origin response (แย่สุด load 8.6 วินาที) เพื่อ Core Web Vitals และไม่ให้ crawler timeout',
-   count:'48 URL · วัดผลก่อน–หลัง'},
-  {id:'t6', tsk:'TSK-008', group:'high', title:'แก้เนื้อหา /en ที่ยังเป็นภาษาไทย (News section)', price:80000, days:12, mode:'human', checked:false, due:'30 ก.ย.',
-   scope:'ปรับเนื้อหาหน้า English ในส่วนข่าวที่ยังแสดงเป็นภาษาไทยให้เป็นภาษาอังกฤษจริง เพื่อให้เวอร์ชันภาษาถูกต้องและสอดคล้องกับ hreflang',
-   count:'News section (/en)'},
-  {id:'t7', tsk:'TSK-010', group:'high', title:'บล็อก staging subdomain (ex-prod) ไม่ให้ถูก index', free:true, price:0, days:2, checked:false, due:'31 ส.ค.',
-   scope:'ใส่ noindex + authentication ที่ระดับ subdomain — staging ที่ติด index ทำให้เกิด duplicate แข่งกับ production และเสี่ยงข้อมูลราคา/สเปกเก่าหลุดสู่ผู้ใช้',
-   count:'ex-prod subdomain'},
-  {id:'t8', tsk:'TSK-005', group:'medium', title:'เติม Open Graph tags ที่ขาด 50 URL', price:20000, days:3, mode:'ai', checked:false, due:'30 ก.ย.',
-   scope:'เพิ่ม og:title, og:description, og:image, og:type ให้ครบทุกหน้าและไม่ปะปน — ช่วย CTR จากการแชร์ผ่าน social/LINE ซึ่งเป็นช่องทางหลักของ MG',
-   count:'50 URL'},
-  {id:'t9', tsk:'TSK-006', group:'medium', title:'ลด H1 ซ้ำซ้อนเหลือ 1 ต่อหน้า (20 URL)', price:20000, days:3, mode:'ai', checked:false, due:'30 ก.ย.',
-   scope:'หน้ารุ่นรถบางหน้ามี H1 ถึง 6 ตัว — ปรับ template ให้เหลือ H1 เดียวและไล่ลำดับ H2/H3 ตามโครงเนื้อหา โดยไม่กระทบดีไซน์ที่แสดงผล',
-   count:'20 URL'},
-  {id:'t10', tsk:'TSK-009', group:'medium', title:'แทน alt text ที่ auto-generate ด้วย alt ที่สื่อความหมาย', price:25000, days:5, mode:'ai', checked:false, due:'31 ต.ค.',
-   scope:'ระบบสร้าง alt อัตโนมัติจากชื่อไฟล์ — เขียน alt จริงตามรุ่นรถ/สี/มุมภาพ เพื่อปลดล็อก image search traffic และ accessibility',
-   count:'ทั้งเว็บ'},
-];
-
-const fmt = n => n.toLocaleString('th-TH');
-const baht = n => '฿' + fmt(n);
-
-document.getElementById('sections').innerHTML = GROUPS.map(g=>{
-  const items = TASKS.filter(t=>t.group===g.key);
-  return `<div class="group-head"><span class="tag ${g.tag}">${g.label}</span><span class="g-title">${g.title}</span><span class="g-count num">${items.length} รายการ</span></div>` +
-  items.map(t=>`
-  <section class="pkg ${t.checked?'selected':''}" id="pkg-${t.id}">
-    <label class="pkg-head" for="cb-${t.id}">
-      <input type="checkbox" class="cds-checkbox" id="cb-${t.id}" data-pkg="${t.id}" ${t.checked?'checked':''}>
-      <div class="pkg-main">
-        <div class="pkg-title-row">
-          <span class="pkg-id">${t.tsk}</span>
-          <span class="pkg-title">${t.title}</span>
-          ${t.free?'<span class="tag green">ฟรี</span>':''}
-        </div>
-        <div class="pkg-scope">${t.scope}</div>
-        <div class="pkg-count num">${t.count} · เป้าหมายตาม audit: ภายใน ${t.due} 2026</div>
-      </div>
-      <div class="pkg-price">
-        <div class="pp num">${t.free?'ฟรี':baht(t.price)}</div>
-        <div class="pl">${t.free?'ไม่มีค่าใช้จ่าย':({ai:'AI ดำเนินการหลัก · ราคาประหยัด',hybrid:'AI + ทีมงานร่วมดำเนินการ',human:'ทีมงานเฉพาะทาง + ประชุมกับทีม MG'}[t.mode]||'รวม QA')}</div>
-        <div class="pl num">ระยะเวลา ${t.days} วันทำการ</div>
-      </div>
-    </label>
-  </section>`).join('');
-}).join('');
-
-const state = Object.fromEntries(TASKS.map(t=>[t.id, t.checked]));
-function refresh(){
-  let total = 0, days = 0, sel = 0;
-  TASKS.forEach(t=>{
-    if(state[t.id]){ total += t.price; days += t.days; sel++; }
-    document.getElementById('pkg-'+t.id).classList.toggle('selected', state[t.id]);
-  });
-  const allSelected = TASKS.every(t=>state[t.id]);
-  const discount = allSelected ? Math.round(total*0.2) : 0;
-  const net = total - discount;
-  document.getElementById('s-discount').style.display = discount ? 'flex' : 'none';
-  document.getElementById('s-discount-amt').textContent = discount ? '−' + baht(discount) : '';
-  document.getElementById('s-sel').textContent = `(เลือก ${sel}/${TASKS.length} รายการ)`;
-  document.getElementById('s-total').innerHTML = baht(net) + ' <small>(ไม่รวม VAT 7%)</small>';
-  document.getElementById('pay1').textContent = baht(net/2);
-  document.getElementById('pay2').textContent = baht(net/2);
-  document.getElementById('s-days').textContent = days ? days + ' วันทำการ' : '—';
-}
-document.addEventListener('change', e=>{
-  if(!e.target.matches('input.cds-checkbox')) return;
-  state[e.target.dataset.pkg] = e.target.checked;
-  refresh();
-});
-refresh();
-
-/* ===== access gate ===== */
-(function(){
-  const CODE = 'dmstaff';
-  const form = document.getElementById('gate-form');
-  const input = document.getElementById('gate-input');
-  const err = document.getElementById('gate-err');
-  form.addEventListener('submit', e=>{
-    e.preventDefault();
-    if(input.value.trim().toLowerCase() === CODE){
-      document.body.classList.remove('locked');
-    }else{
-      err.classList.add('show');
-      input.value=''; input.focus();
-    }
-  });
-})();
-</script>
 </body>
 </html>
