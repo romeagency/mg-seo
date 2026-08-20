@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>MG Cars — SEO Improvement Proposal</title>
+<title>MG Cars — Technical SEO Resolution Proposal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;600&family=IBM+Plex+Sans:wght@300;400;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
   /* Carbon Design System — White/g10 tokens */
   :root{
@@ -20,6 +20,7 @@
     --tag-gray-bg:#e0e0e0; --tag-gray-text:#393939;
     --tag-green-bg:#a7f0ba; --tag-green-text:#0e6027;
     --font:'IBM Plex Sans','IBM Plex Sans Thai','Helvetica Neue',Arial,sans-serif;
+    --mono:'IBM Plex Mono',Menlo,monospace;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{font-size:16px}
@@ -31,7 +32,7 @@
   .shell .spacer{flex:1}
   .shell .meta{color:#c6c6c6;font-size:.75rem}
 
-  .wrap{max-width:52rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
+  .wrap{max-width:56rem;margin:0 auto;padding:1.5rem 1rem 2.5rem}
 
   .label-01{font-size:.75rem;line-height:1rem;letter-spacing:.32px;color:var(--ink2)}
   .num{font-variant-numeric:tabular-nums}
@@ -46,26 +47,32 @@
   .tag.gray{background:var(--tag-gray-bg);color:var(--tag-gray-text)}
   .tag.green{background:var(--tag-green-bg);color:var(--tag-green-text)}
 
+  .group-head{display:flex;align-items:center;gap:.625rem;margin:1.5rem 0 .625rem}
+  .group-head:first-child{margin-top:0}
+  .group-head .g-title{font-size:1rem;font-weight:600}
+  .group-head .g-count{font-size:.75rem;color:var(--ink3)}
+
   .cds-checkbox{appearance:none;-webkit-appearance:none;width:1rem;height:1rem;border:1px solid var(--ink);border-radius:1px;background:transparent;cursor:pointer;position:relative;flex:none;margin-top:.1875rem}
   .cds-checkbox:checked{background:var(--ink);border-color:var(--ink)}
   .cds-checkbox:checked::after{content:'';position:absolute;left:4.5px;top:1.5px;width:4px;height:8px;border:solid #fff;border-width:0 1.8px 1.8px 0;transform:rotate(45deg)}
   .cds-checkbox:focus-visible{outline:2px solid var(--interactive);outline-offset:1px}
 
-  section.pkg{background:var(--layer);border:1px solid var(--border);margin-bottom:.75rem}
+  section.pkg{background:var(--layer);border:1px solid var(--border);margin-bottom:.5rem}
   section.pkg.selected{border-color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
-  .pkg-head{display:flex;align-items:flex-start;gap:.875rem;padding:.875rem 1rem;cursor:pointer}
+  .pkg-head{display:flex;align-items:flex-start;gap:.875rem;padding:.75rem 1rem;cursor:pointer}
   .pkg-head:hover{background:#fafafa}
   .pkg-main{flex:1;min-width:0}
   .pkg-title-row{display:flex;align-items:center;gap:.625rem;flex-wrap:wrap}
-  .pkg-title{font-size:1rem;line-height:1.375rem;font-weight:600}
-  .pkg-scope{color:var(--ink2);font-size:.8125rem;margin-top:.25rem;max-width:36rem}
+  .pkg-id{font-family:var(--mono);font-size:.6875rem;color:var(--ink3)}
+  .pkg-title{font-size:.9375rem;line-height:1.375rem;font-weight:600}
+  .pkg-scope{color:var(--ink2);font-size:.8125rem;margin-top:.25rem;max-width:38rem}
   .pkg-count{font-size:.75rem;color:var(--ink3);margin-top:.25rem}
-  .pkg-price{text-align:right;flex:none}
+  .pkg-price{text-align:right;flex:none;min-width:8.5rem}
   .pkg-price .pp{font-size:1.125rem;font-weight:400;white-space:nowrap}
   .pkg.selected .pkg-price .pp{font-weight:600}
   .pkg-price .pl{font-size:.6875rem;color:var(--ink3);margin-top:.125rem}
 
-  .summary{background:var(--layer);border:1px solid var(--border);margin-top:1.25rem}
+  .summary{background:var(--layer);border:1px solid var(--border);margin-top:1.5rem}
   .summary .s-head{padding:.875rem 1rem;border-bottom:1px solid var(--border);font-weight:600}
   .summary .s-row{display:flex;align-items:center;gap:.75rem;padding:.75rem 1rem;border-bottom:1px solid var(--border);font-size:.875rem}
   .summary .s-row .s-name{flex:1}
@@ -110,7 +117,7 @@
 <body class="locked">
 <div class="gate" id="gate">
   <div class="gate-card">
-    <div class="gate-brand"><span>MG Cars</span> SEO Improvement Proposal</div>
+    <div class="gate-brand"><span>MG Cars</span> Technical SEO Resolution</div>
     <div class="gate-title">กรอกรหัสเพื่อเข้าชมเอกสาร</div>
     <div class="gate-sub">เอกสารนี้จำกัดการเข้าถึงเฉพาะผู้ที่ได้รับรหัส</div>
     <form id="gate-form">
@@ -121,32 +128,32 @@
   </div>
 </div>
 <header class="shell">
-  <div class="name"><span class="prefix">MG Cars</span> SEO Improvement Proposal</div>
+  <div class="name"><span class="prefix">MG Cars</span> Technical SEO Resolution — Cost &amp; Timeline Proposal</div>
   <div class="spacer"></div>
   <div class="meta">🎖️ ROME AGENCY</div>
 </header>
 
 <div class="wrap">
   <div class="page-head">
-    <div class="label-01">SEO AUDIT &amp; QUOTATION</div>
-    <h1>ข้อเสนอปรับปรุงคุณภาพ SEO — www.mgcars.com</h1>
-    <div class="sub">จากผลตรวจสอบเว็บไซต์ทั้งระบบ (Site Audit) วันที่ 20 สิงหาคม 2026 · จัดลำดับความสำคัญ P1 → P4 · ยืนราคาถึง 19 กันยายน 2026</div>
+    <div class="label-01">COST &amp; TIMELINE PROPOSAL</div>
+    <h1>ข้อเสนอแก้ไข Technical SEO — www.mgcars.com</h1>
+    <div class="sub">อ้างอิงผล SEO Audit วันที่ 20 สิงหาคม 2026 (10 รายการที่ทีม technical ต้องแก้ไข) · เลือกรายการที่ต้องการ ราคารวมและระยะเวลาจะสรุปด้านล่าง · ยืนราคาถึง 19 กันยายน 2026</div>
   </div>
 
   <div id="sections"></div>
 
   <div class="summary">
-    <div class="s-head">สรุปราคาตามแพ็กเกจที่เลือก</div>
+    <div class="s-head">สรุปราคาตามรายการที่เลือก</div>
     <div class="s-row" id="s-discount" style="display:none">
       <span class="tag green">ส่วนลด</span>
-      <span class="s-name">เลือกครบทุกแพ็กเกจ — ส่วนลด 20%</span>
+      <span class="s-name">เลือกครบทุกรายการ — ส่วนลด 20%</span>
       <span class="s-price num" id="s-discount-amt" style="color:#0e6027"></span>
     </div>
     <div class="s-total">
-      <div class="t-label">ราคารวม</div>
+      <div class="t-label">ราคารวม <span id="s-sel" class="num" style="font-weight:400;color:var(--ink3);font-size:.75rem"></span></div>
       <div class="t-amount num" id="s-total">฿0 <small>(ไม่รวม VAT 7%)</small></div>
     </div>
-    <div class="s-row" style="border-bottom:none;border-top:1px solid var(--border)">
+    <div class="s-row" style="border-bottom:1px solid var(--border)">
       <span class="s-name" style="color:var(--ink2)">รวมระยะเวลาดำเนินการ</span>
       <span class="s-price num" id="s-days" style="font-weight:600"></span>
     </div>
@@ -165,62 +172,91 @@
   </div>
 
   <div class="terms">
-    ทุกแพ็กเกจรวมการทดสอบ (QA), รายงานผลหลังส่งมอบ และรับประกันผลงาน 30 วัน · เงื่อนไขการชำระเงินแบ่งเป็น 2 งวด (50/50) · รับส่วนลด 20% เมื่อเลือกครบทุกแพ็กเกจ · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 กันยายน 2026
+    ทุกรายการรวมการทดสอบ (QA) · เงื่อนไขการชำระเงินแบ่งเป็น 2 งวด (50/50) · รับส่วนลด 20% เมื่อเลือกครบทุกรายการ · ราคาไม่รวม VAT 7% · ยืนราคาถึง 19 กันยายน 2026
   </div>
 </div>
 
 <script>
-const PKGS = [
-  {id:'p1', tag:'red', tagLabel:'P1 · Critical', title:'แก้หน้า Error 500', free:true, price:0, days:5, checked:true,
-   scope:'กู้คืนหน้าทดลองขับ / จองออนไลน์ / สถานีชาร์จ / คำนวณราคา ที่เข้าไม่ได้ทั้งหมด · จัดการหน้าเก่าที่ยกเลิกแล้วให้ redirect ถูกต้อง · ตรวจสอบซ้ำทั้งเว็บไซต์หลังแก้ไข',
-   count:'80 หน้า · มีลิงก์ชี้เข้า 1,100 จุด · งานเร่งด่วน ดำเนินการทันที'},
-  {id:'p2', tag:'magenta', tagLabel:'P2 · High', title:'จัดการหน้าซ้ำ + Canonical ทั้งระบบ', price:75000, days:10, checked:false,
-   scope:'ติดตั้ง Canonical URL ครบทุกหน้า รวมคะแนน SEO ที่กระจายจาก URL โฆษณา (gclid / fbclid) กลับมาที่หน้าหลัก · รวม URL ที่สะกดต่างกันด้วย 301 Redirect',
-   count:'74 URLs · 21 หน้าหลัก · ตรวจสอบซ้ำด้วยการ crawl เต็มระบบหลังส่งมอบ'},
-  {id:'p3', tag:'blue', tagLabel:'P3 · Medium', title:'ปรับความเร็วเว็บไซต์ + มาตรฐาน Metadata', price:240000, days:20, checked:false,
-   scope:'ปรับความเร็วการโหลด (Core Web Vitals) เริ่มจากหน้าผู้เข้าชมสูงสุด · เพิ่ม Alt Text ให้รูปภาพครบถ้วน · ปรับ Social Sharing Metadata (Open Graph) ให้สมบูรณ์ทุกหน้า',
-   count:'Slow 114 · Alt 44 · OG 117 · วัดผลก่อน–หลังพร้อมรายงานเปรียบเทียบ'},
-  {id:'p4', tag:'gray', tagLabel:'P4 · Standard', title:'ปรับโครงสร้างหัวข้อหน้า (Heading Structure)', price:60000, days:7, checked:false,
-   scope:'จัดโครงสร้างหัวข้อ (H1) ให้ถูกต้องตามแนวทางของ Google ทั้ง 59 หน้า โดยไม่กระทบดีไซน์ที่แสดงผล',
-   count:'59 หน้า · 23 กลุ่มหน้าหลัก · ตรวจสอบซ้ำหลังส่งมอบ'},
+const GROUPS = [
+  {key:'critical', tag:'red',     label:'Critical', title:'Critical — กระทบการมองเห็นและการขายโดยตรง'},
+  {key:'high',     tag:'magenta', label:'High',     title:'High — กระทบอันดับและความถูกต้องของ index'},
+  {key:'medium',   tag:'gray',    label:'Medium',   title:'Medium — ยกระดับคุณภาพและการแชร์'},
+];
+
+const TASKS = [
+  {id:'t1', tsk:'TSK-001', group:'critical', title:'แก้ HTTP 500 บนหน้าเงินหลัก 35 URL', free:true, price:0, days:5, checked:true, due:'31 ส.ค.',
+   scope:'หน้า /cars, /promotions, /online-booking, /after-services คืนสถานะ 500 ให้ crawler — แก้ที่ระดับ server/rendering ไม่ใช่แค่ redirect เพื่อให้ Googlebot และ AI crawler อ่านหน้าเงินหลักได้',
+   count:'35 URL · มี internal link ชี้เข้า 1,185 จุด · งานเร่งด่วน ดำเนินการทันที'},
+  {id:'t2', tsk:'TSK-002', group:'critical', title:'ติดตั้ง hreflang ทั้งเว็บ (th / en / x-default)', price:60000, days:7, checked:false, due:'31 ส.ค.',
+   scope:'เพิ่ม hreflang แบบ reciprocal ทุกหน้าที่มีคู่ TH/EN และเพิ่มใน sitemap เพื่อให้ Google เลือกเวอร์ชันภาษาถูกต้องใน SERP (ปัจจุบัน /en ได้ 1.29M impressions แต่ CTR ต่ำกว่าปกติ)',
+   count:'ทุกหน้าที่มีคู่ภาษา + sitemap'},
+  {id:'t3', tsk:'TSK-003', group:'critical', title:'เปิด AI crawler ใน robots.txt + สร้าง /llms.txt', price:25000, days:2, checked:false, due:'20 ส.ค.',
+   scope:'อนุญาต GPTBot, ClaudeBot, PerplexityBot, Google-Extended, CCBot, Applebot-Extended และสร้าง llms.txt ชี้ไปหน้าข้อมูลรุ่นรถ/ราคา/สเปก — ปัจจุบัน AI ตอบคำถามเกี่ยวกับ MG โดยอ้างอิงเว็บอื่นแทน mgcars.com',
+   count:'robots.txt + /llms.txt'},
+  {id:'t4', tsk:'TSK-004', group:'high', title:'แก้ duplicate content 76 URL ที่ไม่มี canonical', price:75000, days:10, checked:false, due:'15 ก.ย.',
+   scope:'กำหนด canonical ให้ทุกกลุ่มหน้าที่เนื้อหาซ้ำ (หน้ารุ่นรถมีถึง 3 variant) และตัด parameter URL ออกจาก sitemap เพื่อรวม link equity กลับหน้าเดียวและลด crawl budget ที่เสียไป',
+   count:'76 URL · ตรวจสอบซ้ำด้วยการ crawl เต็มระบบ'},
+  {id:'t5', tsk:'TSK-007', group:'high', title:'แก้หน้าโหลดช้า 48 URL (TTFB สูง)', price:150000, days:15, checked:false, due:'30 ก.ย.',
+   scope:'TTFB เป็นสัดส่วนใหญ่ของ load time — แก้ที่ฝั่ง server/CDN ด้วย cache layer และ origin response (แย่สุด load 8.6 วินาที) เพื่อ Core Web Vitals และไม่ให้ crawler timeout',
+   count:'48 URL · วัดผลก่อน–หลัง'},
+  {id:'t6', tsk:'TSK-008', group:'high', title:'แก้เนื้อหา /en ที่ยังเป็นภาษาไทย (News section)', price:45000, days:10, checked:false, due:'30 ก.ย.',
+   scope:'ปรับเนื้อหาหน้า English ในส่วนข่าวที่ยังแสดงเป็นภาษาไทยให้เป็นภาษาอังกฤษจริง เพื่อให้เวอร์ชันภาษาถูกต้องและสอดคล้องกับ hreflang',
+   count:'News section (/en)'},
+  {id:'t7', tsk:'TSK-010', group:'high', title:'บล็อก staging subdomain (ex-prod) ไม่ให้ถูก index', price:20000, days:2, checked:false, due:'31 ส.ค.',
+   scope:'ใส่ noindex + authentication ที่ระดับ subdomain — staging ที่ติด index ทำให้เกิด duplicate แข่งกับ production และเสี่ยงข้อมูลราคา/สเปกเก่าหลุดสู่ผู้ใช้',
+   count:'ex-prod subdomain'},
+  {id:'t8', tsk:'TSK-005', group:'medium', title:'เติม Open Graph tags ที่ขาด 50 URL', price:30000, days:5, checked:false, due:'30 ก.ย.',
+   scope:'เพิ่ม og:title, og:description, og:image, og:type ให้ครบทุกหน้าและไม่ปะปน — ช่วย CTR จากการแชร์ผ่าน social/LINE ซึ่งเป็นช่องทางหลักของ MG',
+   count:'50 URL'},
+  {id:'t9', tsk:'TSK-006', group:'medium', title:'ลด H1 ซ้ำซ้อนเหลือ 1 ต่อหน้า (20 URL)', price:30000, days:5, checked:false, due:'30 ก.ย.',
+   scope:'หน้ารุ่นรถบางหน้ามี H1 ถึง 6 ตัว — ปรับ template ให้เหลือ H1 เดียวและไล่ลำดับ H2/H3 ตามโครงเนื้อหา โดยไม่กระทบดีไซน์ที่แสดงผล',
+   count:'20 URL'},
+  {id:'t10', tsk:'TSK-009', group:'medium', title:'แทน alt text ที่ auto-generate ด้วย alt ที่สื่อความหมาย', price:40000, days:7, checked:false, due:'31 ต.ค.',
+   scope:'ระบบสร้าง alt อัตโนมัติจากชื่อไฟล์ — เขียน alt จริงตามรุ่นรถ/สี/มุมภาพ เพื่อปลดล็อก image search traffic และ accessibility',
+   count:'ทั้งเว็บ'},
 ];
 
 const fmt = n => n.toLocaleString('th-TH');
 const baht = n => '฿' + fmt(n);
 
-document.getElementById('sections').innerHTML = PKGS.map(p=>`
-  <section class="pkg ${p.checked?'selected':''}" id="pkg-${p.id}">
-    <label class="pkg-head" for="cb-${p.id}">
-      <input type="checkbox" class="cds-checkbox" id="cb-${p.id}" data-pkg="${p.id}" ${p.checked?'checked':''}>
+document.getElementById('sections').innerHTML = GROUPS.map(g=>{
+  const items = TASKS.filter(t=>t.group===g.key);
+  return `<div class="group-head"><span class="tag ${g.tag}">${g.label}</span><span class="g-title">${g.title}</span><span class="g-count num">${items.length} รายการ</span></div>` +
+  items.map(t=>`
+  <section class="pkg ${t.checked?'selected':''}" id="pkg-${t.id}">
+    <label class="pkg-head" for="cb-${t.id}">
+      <input type="checkbox" class="cds-checkbox" id="cb-${t.id}" data-pkg="${t.id}" ${t.checked?'checked':''}>
       <div class="pkg-main">
         <div class="pkg-title-row">
-          <span class="tag ${p.tag}">${p.tagLabel}</span>
-          <span class="pkg-title">${p.title}</span>
-          ${p.free?'<span class="tag green">ฟรี</span>':''}
+          <span class="pkg-id">${t.tsk}</span>
+          <span class="pkg-title">${t.title}</span>
+          ${t.free?'<span class="tag green">ฟรี</span>':''}
         </div>
-        <div class="pkg-scope">${p.scope}</div>
-        <div class="pkg-count num">${p.count}</div>
+        <div class="pkg-scope">${t.scope}</div>
+        <div class="pkg-count num">${t.count} · เป้าหมายตาม audit: ภายใน ${t.due} 2026</div>
       </div>
       <div class="pkg-price">
-        <div class="pp num">${p.free?'ฟรี':baht(p.price)}</div>
-        <div class="pl">${p.free?'ไม่มีค่าใช้จ่าย':'รวม QA และรายงานผล'}</div>
-        <div class="pl num">ระยะเวลา ${p.days} วันทำการ</div>
+        <div class="pp num">${t.free?'ฟรี':baht(t.price)}</div>
+        <div class="pl">${t.free?'ไม่มีค่าใช้จ่าย':'รวม QA'}</div>
+        <div class="pl num">ระยะเวลา ${t.days} วันทำการ</div>
       </div>
     </label>
   </section>`).join('');
+}).join('');
 
-const state = Object.fromEntries(PKGS.map(p=>[p.id, p.checked]));
+const state = Object.fromEntries(TASKS.map(t=>[t.id, t.checked]));
 function refresh(){
-  let total = 0, days = 0;
-  PKGS.forEach(p=>{
-    if(state[p.id]){ total += p.price; days += p.days; }
-    document.getElementById('pkg-'+p.id).classList.toggle('selected', state[p.id]);
+  let total = 0, days = 0, sel = 0;
+  TASKS.forEach(t=>{
+    if(state[t.id]){ total += t.price; days += t.days; sel++; }
+    document.getElementById('pkg-'+t.id).classList.toggle('selected', state[t.id]);
   });
-  const allSelected = PKGS.every(p=>state[p.id]);
+  const allSelected = TASKS.every(t=>state[t.id]);
   const discount = allSelected ? Math.round(total*0.2) : 0;
   const net = total - discount;
   document.getElementById('s-discount').style.display = discount ? 'flex' : 'none';
   document.getElementById('s-discount-amt').textContent = discount ? '−' + baht(discount) : '';
+  document.getElementById('s-sel').textContent = `(เลือก ${sel}/${TASKS.length} รายการ)`;
   document.getElementById('s-total').innerHTML = baht(net) + ' <small>(ไม่รวม VAT 7%)</small>';
   document.getElementById('pay1').textContent = baht(net/2);
   document.getElementById('pay2').textContent = baht(net/2);
