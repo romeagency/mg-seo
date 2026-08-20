@@ -79,6 +79,22 @@
 
   .terms{margin-top:1rem;color:var(--ink3);font-size:.75rem;line-height:1.5}
 
+  /* ===== access gate ===== */
+  body.locked>.shell, body.locked>.wrap{display:none}
+  .gate{position:fixed;inset:0;background:#161616;display:none;align-items:center;justify-content:center;z-index:100;padding:1rem}
+  body.locked .gate{display:flex}
+  .gate-card{background:var(--layer);width:100%;max-width:24rem;padding:2rem}
+  .gate-brand{font-size:.75rem;letter-spacing:.32px;color:var(--ink2);margin-bottom:1.5rem}
+  .gate-brand span{font-weight:600;color:var(--ink)}
+  .gate-title{font-size:1.25rem;line-height:1.75rem;font-weight:400}
+  .gate-sub{color:var(--ink2);font-size:.8125rem;margin-top:.375rem;margin-bottom:1.25rem}
+  .gate-input{display:block;width:100%;height:2.5rem;border:none;border-bottom:1px solid #8d8d8d;background:var(--bg);padding:0 1rem;font-family:var(--font);font-size:.875rem;color:var(--ink);outline:none}
+  .gate-input:focus{outline:2px solid var(--interactive);outline-offset:-2px}
+  .gate-btn{display:block;width:100%;height:3rem;margin-top:1rem;background:var(--interactive);color:#fff;border:none;font-family:var(--font);font-size:.875rem;text-align:left;padding:0 1rem;cursor:pointer}
+  .gate-btn:hover{background:#0050e6}
+  .gate-err{display:none;margin-top:.75rem;font-size:.75rem;color:#da1e28}
+  .gate-err.show{display:block}
+
   @media(max-width:560px){.pkg-head{flex-wrap:wrap}.pkg-price{text-align:left}}
   @media print{
     body{background:#fff}
@@ -88,7 +104,19 @@
   }
 </style>
 </head>
-<body>
+<body class="locked">
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="gate-brand"><span>MG Cars</span> SEO Improvement Proposal</div>
+    <div class="gate-title">กรอกรหัสเพื่อเข้าชมเอกสาร</div>
+    <div class="gate-sub">เอกสารนี้จำกัดการเข้าถึงเฉพาะผู้ที่ได้รับรหัส</div>
+    <form id="gate-form">
+      <input type="password" id="gate-input" class="gate-input" placeholder="Access code" autocomplete="off" autofocus>
+      <button type="submit" class="gate-btn">เข้าชมเอกสาร</button>
+    </form>
+    <div class="gate-err" id="gate-err">รหัสไม่ถูกต้อง กรุณาลองใหม่</div>
+  </div>
+</div>
 <header class="shell">
   <div class="name"><span class="prefix">MG Cars</span> SEO Improvement Proposal</div>
   <div class="spacer"></div>
@@ -185,6 +213,23 @@ document.addEventListener('change', e=>{
   refresh();
 });
 refresh();
+
+/* ===== access gate ===== */
+(function(){
+  const CODE = 'dmstaff';
+  const form = document.getElementById('gate-form');
+  const input = document.getElementById('gate-input');
+  const err = document.getElementById('gate-err');
+  form.addEventListener('submit', e=>{
+    e.preventDefault();
+    if(input.value.trim().toLowerCase() === CODE){
+      document.body.classList.remove('locked');
+    }else{
+      err.classList.add('show');
+      input.value=''; input.focus();
+    }
+  });
+})();
 </script>
 </body>
 </html>
